@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@500;700;900&display=swap');
+
+*{
+
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1D1A39;
+}
+
+.card{
+     
+      /* background: linear-gradient(45deg, rgb(0, 208, 255) , rgb(0, 255, 217)); */
+      background: linear-gradient(45deg, rgb(18 93 185) , rgb(39 212 186));
+      text-align: center;
+      /* background-color: rgba(255, 255, 255, 0.053); */
+     
+      padding: 30px;
+      position: relative;
+      border-radius: 20px;
+   
+}
+.whether{
+      width: 350px;
+      height:450px;
+    display: none;
+    transition: height , 1s;
+    
+     
+}
+
+.btn{
+      width: 15px;
+      vertical-align: middle;
+}
+
+.search-btn{
+    width: 40px;
+    height: 40px;
+     border-radius: 200px;
+     border:  none;
+     background-color: white;
+     cursor: pointer;
+}
+
+.text{
+      height: 40px;
+      width: 260px;
+      padding: 5px;
+      padding-left: 16px;
+      outline: none;
+      border: none;
+      border-radius: 20px;
+      caret-color: aqua;font-size: 20px;
+     
+      color: rgb(62, 62, 62);
+      margin-bottom: 30px;
+
+}
+
+.whether-info{
+      color: white;
+      font-size: 40px;
+      font-weight: 500;
+}
+
+.city{
+      color: white;
+      font-size: 40px;
+      font-weight: 400;
+}
+
+.whether-left{
+      width: 100px;
+}
+
+.left{
+      position: absolute;
+      bottom: 20px;
+      left: 30px;
+}
+.img-left{
+ width: 30px;
+ display: inline-block;
+}
+.whether-left{
+      display: inline-block;
+      font-size:15px;
+      color: white;
+}
+
+.whether-right{
+      display: inline-block;
+      font-size:15px;
+      color: white;
+      width: 100px;
+}
+
+
+
+.right{
+      position: absolute;
+      bottom: 20px;
+      right: 30px;
+}
+
+.left-bottom{
+      text-align: center;
+      color: white;
+}
+
+

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500;600;700&display=swap');
+
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto Mono', monospace;
+}
+
+
+.container{
+      background-color: rgb(47, 8, 49);
+     
+      position: relative;
+      height: 100vh;
+}
+
+.Qr-code{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      background-color: rgb(255, 255, 255);
+      text-align: center;
+      padding: 30px;
+      border-radius: 10px;
+}
+
+.Qr-heading{
+      font-size: 30px;
+      color: rgb(0, 0, 0);
+      margin-bottom: 10px;
+
+}
+
+#Qr-value{
+      width: 100%;
+      margin-bottom: 20px;
+      height: 50px;
+      background-color: rgba(255, 255, 255, 0.687);
+      outline: none;
+      border:  1px solid rgba(0, 0, 0, 0.402);
+      caret-color: rgb(0, 0, 0);
+      font-size: 20px;
+      padding: 0 10px;
+      color: rgb(0, 0, 0);
+}
+
+.Qr-button{
+      border: none;
+      background-color: rgb(47, 8, 49);
+      letter-spacing: 1px;
+      font-size: 20px;
+      border-radius: 10px;
+      padding: 13px 0;
+      width: 100%;
+      font-weight: 600;
+      cursor: pointer;
+      color: white;
+      margin-top: 20px;
+}
+
+.img-box{
+      height: 0;
+      width: 0;
+      overflow: hidden;
+      transition: .6s;
+
+
+}
+.img-box-show{
+      height: 160px;
+      width: 160px;
+     margin: auto;
+}
+.img-qr{
+      height: 160px;
+      width: 160px;
+    
+      
+}
+
+.error{
+      animation-name: move;
+      animation-duration: .2s;
+      animation-iteration-count: 5;
+      /* animation-timing-function: ease-in; */
+}
+
+@keyframes move{
+
+      0%{
+            transform: translate(0);
+      }
+      20%{
+            transform: translate(-2px,-2px);
+      }
+      40%{
+            transform: translate(0px,0px);
+      }
+      60%{
+            transform: translate(2px,-2px);
+      }
+      80%{
+            transform: translate(0px ,0px);
+      }
+      100%{
+            transform: translate(-2px , 2px);
+      }
+}

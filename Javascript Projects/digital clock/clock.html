@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+
+        ::-webkit-scrollbar{
+            width: 11px;
+        }
+        ::-webkit-scrollbar-track{
+            background:rgb(0, 0, 0) ;
+        }
+        ::-webkit-scrollbar-thumb{
+            background-color: rgb(255, 234, 3);
+            background-clip: content-box;
+            border-radius: 200px;
+            border: 2px solid transparent;
+
+        }
+
+        body{
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            background-color: rgb(0, 0, 0);
+        }
+        .clock{
+            position: relative;
+            height: 100px;
+            width: 550px;
+            background-color: rgba(104, 99, 99, 0.164);
+            border-radius: 50px;
+        }
+        #head{
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            transform: translateY(-50%);
+            position: relative;
+            z-index: 1;
+        }
+        h1{
+            font-size:40px;
+            font-weight: 600;
+        }
+
+        .a{
+            position: absolute;
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            background: linear-gradient(to right, #ff009d28,#fc1717);
+            border-radius: 50%;
+            z-index: -1;
+            
+            top: -0px;
+            filter: blur(10px);
+            
+        }
+
+        .b{
+            position: absolute;
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            background: linear-gradient(to right, #d1ff2b28,#fc9917);
+            border-radius: 50%;
+            z-index: -1;
+            right: -0px;
+            bottom: -0px;
+            filter: blur(10px);
+        }
+    </style>
+</head>
+<body onload="showtime()">
+    <div class="clock">
+        <span class="a"></span>
+        <span class="b"></span>
+        <h1  id="head"></h1>
+    </div>
+    
+   <script>
+    function showtime(){
+        var d = new Date();
+        var h =d. getHours();
+        var m =d. getMinutes();
+        var s =d. getSeconds();
+        var session ="";
+        if(h >12){
+
+          h = h -12;
+        }
+
+             if (h<12){
+             session= "P.M";
+            }else{
+                session ="A.M"
+            }
+            
+            
+
+        h= h< 10 ?  "0"+ h : h;
+        m= m< 10 ? "0"+ m : m;
+        s= s< 10 ? "0"+ s : s;
+
+        
+       
+        const time = h + " : "+ m +" : " + s + " : " + " "+session;
+        document.getElementById('head').innerText = time;
+
+        setInterval(showtime,1000);
+    }
+   </script>
+</body>
+</html>

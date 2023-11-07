@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gabarito', sans-serif;
+}
+
+/* main start */
+
+.container {}
+
+
+
+/* .left{
+    position: absolute;
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    top:50%;
+    left: 10%;
+    transform: translateY(-50%);
+    filter: blur(90px);
+    
+    background: linear-gradient(to top,rgba(255, 51, 0, 0.288),rgba(255, 0, 170, 0.363));
+}
+
+.right{
+    position: absolute;
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    top:50%;
+    right: 10%;
+    transform: translateY(-50%);
+    filter: blur(0px);
+    
+    background: linear-gradient(to top,rgba(0, 255, 34, 0.089),rgba(0, 119, 255, 0.144));
+} */
+
+
+/* hader start */
+
+
+header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    transition: .6s;
+}
+header.js-header {
+    color: white;
+    background-color: black;
+}
+header.js-header a {
+    color: white;
+   
+}
+.menu{
+    width: 50px;
+    display: none;
+}
+
+
+.main.js-main {
+   background-color: black;
+   color: white;
+   
+}
+
+.my-logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.span-logo {
+    color: rgb(255, 0, 85);
+}
+
+
+nav a {
+    text-decoration: none;
+    color: black;
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+.ankor-home {
+    color: rgb(255, 0, 85);
+}
+
+
+.ankor-imp {
+    padding: 10px 25px;
+    border: 2px solid rgb(255, 0, 85);
+    border-radius: 100px;
+}
+
+
+.main {
+    position: relative;
+    height: 92vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    background-color: rgb(255, 255, 255);
+    transition: .6s;
+}
+
+.main-right-img {
+    width: 500px;
+}
+
+.main-left-head {
+    margin-bottom: 15px;
+    font-size: 60px;
+    width: 450px;
+    font-weight: 600;
+}
+
+.main-left-para {
+    font-size: 20px;
+    width: 550px;
+
+}
+
+
+.main-left-span{
+    color: rgb(255, 0, 85);
+}
+
+button {
+    margin-top: 20px;
+}
+
+.g-start {
+    background-color: rgb(255, 0, 85);
+    border: none;
+    padding: 12px 30px;
+    color: white;
+    border-radius: 100px;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: 600;
+
+    margin-right: 25px;
+
+}
+
+.w-video {
+    background-color: orange;
+
+    border: none;
+    font-size: 20px;
+    
+
+    margin-left: 3px;
+}
+
+.fa-solid {
+    font-size: 20px;
+}
+
+
+
+.toggle{
+    position: relative;
+    height: 36px;
+    width: 70px;
+  
+    box-shadow: inset 2px 0px 5px rgba(0, 0, 0, 0.153);
+    border-radius: 200px;
+    overflow: hidden;
+  
+}
+.toggle.js-toggle{
+    background-color: white;
+}
+.burger{
+    cursor: pointer;
+    position: absolute;
+    width: 28px;
+    height: 78%;
+    background-color: rgb(255, 0, 85);
+   
+   top: 50%;
+   left: 6px;
+   transform: translateY(-50%);
+    border-radius: 200px;
+    transition: .6s ;
+}
+
+.js-burger{
+    left:38px ;
+}
+
+
+
+@media (max-width:400px){
+
+
+    header {
+       
+        padding: 0 20px;
+
+
+    }
+
+    .menu{
+        width: 30px;
+        display: inline-block;
+    }
+
+    nav a {
+        display: none;
+    }
+    
+    .main-left-head {
+       
+        font-size: 30px;
+        width: 100%;
+        
+    }
+   
+    
+   
+    
+    
+   
+    
+   
+    
+    
+   
+    
+    
+    .main {
+      
+        padding: 70px 20px;
+        flex-direction: column-reverse;
+        width: 100%;
+        
+    }
+    
+    .main-right-img {
+      width: 100%;
+      margin-bottom: 30px;
+        
+    }
+    
+    .main-left-para {
+       
+        width: 100%;
+    
+    }
+
+    .g-start {
+      width: 100%;
+    
+    }
+
+    .w-video{
+       text-align: center;
+    }
+
+    
+    
+    .btn{
+        text-align: center;
+        width: 95%;
+    }
+    
+    
+
+    .fa-solid {
+        font-size: 10px;
+        display: inline;
+       
+    }
+    
+
+
+   
+    
+   .main-right{
+    width: 100%;
+   }
+    
+   
+    
+    
+}
+
+

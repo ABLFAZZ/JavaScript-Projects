@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            transition: 0.15s;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            width: 100%;
+            height: 100vh;
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .code-container{
+            
+            width:400px;
+            padding: 30px;
+           text-align: center;
+            background-color: white;
+            border-radius: 30px;
+           
+        }
+
+        .heading{
+            font-size: 40px;
+            letter-spacing: 1px;
+        }
+        .btn{
+            width: 100%;
+            background-color: black;
+            color: white;
+            letter-spacing: 1px;
+            border: none;
+            padding: 14px ;
+            font-size: 30px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .btn:hover{
+            opacity: .8;
+        }
+        .btn:active{
+            opacity: 1;
+        }
+        body{
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="code-container">
+           <div class="head">
+            <h1 class="heading">/h1>
+           </div>
+            <br>
+           <button class="btn">Generate Code</button>
+        </div>
+    </div>
+
+    <script>
+        let getColor =() =>{
+            let ranNum =Math.floor(Math.random()*16777215)  ;
+            let convertInToString ="#" +ranNum.toString(16);
+
+           document.body.style.backgroundColor =convertInToString;
+           document.querySelector('.heading').innerText=convertInToString;
+           navigator.clipboard.writeText(convertInToString);
+
+            
+        }
+
+        document.querySelector('.btn').addEventListener(
+            'click',
+            getColor
+        )
+        getColor();
+    </script>
+</body>
+</html>

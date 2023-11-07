@@ -1,0 +1,12 @@
+ Alogorithm
+
+
+step 1 declare variable of btn
+
+step 2 creating random num
+
+step 3 muli 255 
+
+concat rgb and ( rn,rn,rn)
+
+rinting in body 

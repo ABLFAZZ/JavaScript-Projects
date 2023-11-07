@@ -1,0 +1,10 @@
+ <button class="btn special"onclick="display=display+'-';document.querySelector('#number').value=display"; >-</button>
+            <button class="btn special"onclick="display=display+'+';document.querySelector('#number').value=display"; >+</button>
+
+
+
+            <button class="btn"onclick="display=display+'8';document.querySelector('#number').value=display"; >8</button>
+
+
+
+            <button class="btn"onclick="display=display+'4';document.querySelector('#number').value=display"; >4</button>

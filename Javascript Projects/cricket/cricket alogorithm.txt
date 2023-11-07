@@ -1,0 +1,13 @@
+
+
+
+Alogorithm
+
+
+step 1 :creatin fnction
+step 2 : taking rannum
+step 3 using condition for random six , four , two , one reuse in ;
+step 4 : making object to store numbers;
+step 5 : adding balls;
+step 6 : add all the objects;
+

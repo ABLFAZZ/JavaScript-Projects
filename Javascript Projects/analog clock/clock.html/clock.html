@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="clock.css/clock.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+      </style>
+</head>
+<body>
+    <div class="container">
+        <div class="clock">
+            <span class="clockdes"></span>
+            <span class="clockdess"></span>
+
+            <div id="hours" class="arrow"><i style="background-color: rgb(255, 0, 0); height: 80px;"></i></div>
+            <div id="min" class="arrow" ><i style="background-color: rgb(120, 190, 255); height: 110px;"></i></div>
+            <div id="sec" class="arrow" ><i style="background-color: rgb(255, 255, 255); height: 130px;"></i></div>
+
+
+            <span class="num" style="--i:  1"><b>1</b> </span>
+            <span class="num" style="--i:  2"><b>2</b> </span>
+            <span class="num" style="--i:  3"><b>3</b> </span>
+            <span class="num" style="--i:  4"><b>4</b> </span>
+            <span class="num" style="--i:  5"><b>5</b> </span>
+            <span class="num" style="--i:  6"><b>6</b> </span>
+            <span class="num" style="--i:  7"><b>7</b> </span>
+            <span class="num" style="--i:  8"><b>8</b> </span>
+            <span class="num" style="--i:  9"><b>9</b> </span>
+            <span class="num" style="--i:  10"><b>10</b></span>
+            <span class="num" style="--i:  11"><b>11</b></span>
+            <span class="num" style="--i:  12"><b style="color: rgb(238, 255, 0);">12</b></span>
+        </div>
+    </div>
+
+    <script>
+        let hr = document.getElementById('hours');
+        let m = document.getElementById('min');
+        let s = document.getElementById('sec');
+
+
+        function movearrow(){
+            let date = new Date();
+            let hours = date.getHours();
+            let minutes = date.getMinutes();
+            let seconds = date.getSeconds();
+
+            let hRot= 30*hours +minutes /2;
+            let mRot= 6 *minutes;
+            let sRot=  6*seconds;
+
+
+            hr.style.transform=`rotate(${hRot}deg)`;
+            m.style.transform=`rotate(${mRot}deg)`;
+            s.style.transform=`rotate(${sRot}deg)`;
+
+           
+
+            
+        }setInterval(movearrow,1000);
+
+        
+    </script>
+</body>
+</html>

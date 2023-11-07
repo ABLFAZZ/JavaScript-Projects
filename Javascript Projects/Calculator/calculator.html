@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+    <link rel="icon" href="calc.png">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="main">
+
+            <input type="text" name="number" id="number" placeholder="Enter a Number" readonly ><br><br>
+            <button class="btn special"onclick="display='';document.querySelector('#number').value=display"; >Ac</button>
+            <button  class="btn special"onclick="display=display.toString().slice(0,-1);document.querySelector('#number').value=display";>Del</button>
+            <!-- <br> -->
+            <button class="btn special"onclick="display=display+'/';document.querySelector('#number').value=display"; >/</button>
+            <button class="btn button special"onclick="display=display+'*';document.querySelector('#number').value=display"; >*</button>
+            <button class="btn button"onclick="display=display+'9';document.querySelector('#number').value=display"; >9</button>
+            <button class="btn button"onclick="display=display+'8';document.querySelector('#number').value=display"; >8</button>
+            
+            <button class="btn button"onclick="display=display+'7';document.querySelector('#number').value=display"; >7</button>
+            <!-- <br> -->
+            
+            <button class="btn button special"onclick="display=display+'+';document.querySelector('#number').value=display"; >+</button>
+            <button class="btn button"onclick="display=display+'6';document.querySelector('#number').value=display"; >6</button>
+            
+            <button class="btn button"onclick="display=display+'5';document.querySelector('#number').value=display"; >5</button>
+            <button class="btn button"onclick="display=display+'4';document.querySelector('#number').value=display"; >4</button>
+            <button class="btn button special"onclick="display=display+'-';document.querySelector('#number').value=display"; >-</button>
+            <button class="btn button"onclick="display=display+'3';document.querySelector('#number').value=display"; >3</button>
+            <button class="btn button"onclick="display=display+'2';document.querySelector('#number').value=display"; >2</button>
+            
+            <!-- <br> -->
+            <button class="btn button"onclick="display=display+'1';document.querySelector('#number').value=display"; >1</button>
+            <button class="btn special"onclick="display=display+'%';document.querySelector('#number').value=display"; >%</button>
+
+            <button class="btn button"onclick="display=display+'0';document.querySelector('#number').value=display"; >0</button>
+            <button  class="btn button"onclick="display=display+'0'+'0';document.querySelector('#number').value=display"; >00</button>
+            <button style="width: 138px;border-radius: 5px;; color: white;  " class="btn bg "onclick="display= eval(display);document.querySelector('#number').value=display;" >=</button>
+           
+        </div>
+        </div>
+        <script>
+           let display = "";
+             document.querySelector("#number").value = display;
+             
+            
+        </script>
+    </div>
+
+    <script>
+     
+
+    </script>
+</body>
+</html>
