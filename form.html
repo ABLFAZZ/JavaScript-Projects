@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+      <style>
+            *{
+                  margin: 0
+                  ;
+                  padding: 0;
+                  box-sizing: border-box;
+                  font-family: 'Tajawal', sans-serif;
+            }
+
+            .container{
+                  height: 100vh;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  position: relative;
+            }
+
+            .form{
+                  width: 350px;
+                  padding: 40px 20px;position: relative;
+                  box-shadow: 0px 0px 20px 0px rgb(220, 220, 220);
+                  border-radius: 10px;
+                  z-index: 1;
+                  
+                  
+
+            }
+
+            .form-js{
+                  bottom: 100%;
+                  transition: 1s;
+                  display: none;
+            }
+
+            .request{
+                  text-align: center;
+            }
+
+            input{
+                 
+                  width: 100%;
+                  margin: 20px 0 20px 0;
+                  border: none;
+                  border-bottom: 1px solid rgb(62, 62, 62);
+                  font-size: 18px;
+                  outline: none;
+                  height: 40px;
+            }
+
+            .submit{
+                  width: 100%;
+                  height: 50px;
+                  border-radius: 200px;
+                  border: none;
+                  background-color: rgb(0, 157, 255);
+                  color: white;
+                  letter-spacing: 1px;
+                  font-size: 20px;
+                  font-weight: 500;
+                  margin-top: 10px;
+                  cursor: pointer;
+                
+            }
+
+            .successful{
+                  width: 300px;
+                  height: 280px                                                                             ;
+                  box-shadow: 0px 0px 20px 0px rgb(220, 220, 220);
+                  border-radius: 10px;
+                  padding: 30px 20px;
+                  text-align: center;
+                  position: absolute;
+                  top: -300px;
+                  
+                  background-color: white;
+
+            }
+
+            .successful-js{
+                  animation-name: moveTopToBottom;
+                  animation-fill-mode: backwards;
+                  animation-duration: 2s;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  transition: .7s;
+            }
+            /* @keyframes moveTopToBottom{
+                  0%{
+                       
+                        opacity: 0;
+                  }
+                  100%{
+                        
+                        opacity: 1;
+                  }
+            } */
+
+            .successful-heading{
+                  font-size: 25px;
+                 
+
+            }
+
+            .tick{
+                  height: 130px;
+                  width: 130px;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50% , -50%);
+                  ;
+                  
+                  padding: 20px;
+            }
+
+
+            .let-go{
+                 position: absolute;
+                 bottom: 0;
+                 transform: translateX(-50%);
+                 margin-bottom: 20px;
+                 width: 260px;
+                  height: 50px;
+                  border-radius: 200px;
+                  border: none;
+                  background-color: rgb(0, 157, 255);
+                  color: white;
+                  letter-spacing: 1px;
+                  font-size: 20px;
+                  font-weight: 500;
+                  margin-top: 10px;
+                  cursor: pointer;
+            }
+            .wrong-div{
+                  width: 300px;
+                  height: 280px                                                                             ;
+                  box-shadow: 0px 0px 20px 0px rgb(220, 220, 220);
+                  border-radius: 10px;
+                  padding: 30px 20px;
+                  text-align: center;
+                  position: absolute;
+                  top: -300px;
+                  
+                  background-color: white;
+
+            }
+
+            .wrong-div-js{
+                  animation-name: moveTopToBottom;
+                  animation-fill-mode: backwards;
+                  animation-duration: 2s;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  transition: .7s;
+            }
+            /* @keyframes moveTopToBottom{
+                  0%{
+                       
+                        opacity: 0;
+                  }
+                  100%{
+                        
+                        opacity: 1;
+                  }
+            } */
+
+            .wrong-heading{
+                  font-size: 20px;
+                 
+
+            }
+
+            .wrong{
+                  height: 130px;
+                  width: 130px;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50% , -50%);
+                  ;
+                  
+                  padding: 20px;
+            }
+
+
+            .do-again{
+                 position: absolute;
+                 bottom: 0;
+                 transform: translateX(-50%);
+                 margin-bottom: 20px;
+                 width: 260px;
+                  height: 50px;
+                  border-radius: 200px;
+                  border: none;
+                  background-color: rgb(0, 157, 255);
+                  color: white;
+                  letter-spacing: 1px;
+                  font-size: 20px;
+                  font-weight: 500;
+                  margin-top: 10px;
+                  cursor: pointer;
+            }
+
+
+
+
+
+      </style>
+</head>
+<body>
+      <div class="container">
+            <div class="successful">
+                  <h1 class="successful-heading">Successfully Submited</h1>
+                  <div class="tick-div">
+
+                        <img src="tick.jpg" alt="" class="tick">
+                        <button class="let-go">let's go</button>
+                  </div>
+
+            </div>
+            <div class="wrong-div">
+                  <h1 class="wrong-heading">Please fill the correct form</h1>
+                  <div class="tick-div">
+
+                        <img src="wrong.jpg" alt="" class="wrong">
+                        <button onclick="formAgain()" class="do-again">Do again</button>
+                  </div>
+
+            </div>
+
+
+            <div class="form">
+                  <h1 class="request">Sign up</h1>
+                  <div>
+
+                        <input class="text input" type="text" placeholder="Enter name">
+                  </div>
+                  <div>
+
+                        <input class="email input" type="email"placeholder="Enter email">
+                  </div>
+                  <div>
+
+                        <input class="password input" type="password"placeholder="Enter password">
+                  </div>
+                  <div>
+
+                        <button onclick="succssefullyAnim()" class="submit">Submit</button>
+                  </div>
+            </div>
+      </div>
+      <script>
+            let successful = document.querySelector(".successful");
+            let wrong = document.querySelector(".wrong-div");
+            let form = document.querySelector(".form");
+            let text = document.querySelector(".text");
+            let email = document.querySelector(".email");
+            let password = document.querySelector(".password");
+            
+
+           
+
+            function succssefullyAnim(){
+                  if(text.value.length >0 && email.value.length > 0 && password.value.length > 0){
+
+                        successful.classList.toggle("successful-js");
+                  }
+                  else{
+
+                        wrong.classList.toggle("wrong-div-js");
+
+                  }
+                  // if(email.value.length >0){
+
+                  //       successful.classList.toggle("successful-js");
+                  // }
+                  // else{
+
+                  //       wrong.classList.toggle("wrong-div-js");
+
+                  // }
+                 
+                  // if(password.value.length >0){
+
+                  //       successful.classList.toggle("successful-js");
+                  // }
+                  // else{
+
+                  //       wrong.classList.add("wrong-div-js");
+
+                  // }
+                 
+                  form.classList.add("form-js");
+            }
+
+            function formAgain(){
+
+                  form.classList.remove("form-js");
+                  wrong.classList.remove("wrong-div-js");
+                  
+            }
+      </script>
+</body>
+</html>
